@@ -13,7 +13,7 @@ export const getBooks = async (req,res) => {
 export const createBook = async (req,res) => {
     const {title, body} = req.body;
     if(!title || !body){
-        return res.status(400).json({message: "fill in"})
+        return res.status(400).json({message: "fill in all fields"})
     }
     try{
         const book = await Book.create({title,body});

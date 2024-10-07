@@ -13,6 +13,6 @@ const boolSchema = new mongoose.Schema({
     timestamps:true
 });
 
-const Book = mongoose.model("Book", boolSchema);
+const Book = new mongoose.model("Book", boolSchema);
 
 export default Book;
