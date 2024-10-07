@@ -16,11 +16,11 @@ export const createBook = async (req,res) => {
         return res.status(400).json({message: "fill in"})
     }
     try{
-        const book = await Book.create({title,body})
-        return res.status(201).json({message: "Book created"})
+        const book = await Book.create({title,body});
+        return res.status(201).json({message: "Book created"});
     }catch(error){
-        console.log(error)
-        return res.status(500).json({message: "Failed to create", error})
+        console.log(error);
+        return res.status(500).json({message: "Failed to create", error});
     }
 }
 
